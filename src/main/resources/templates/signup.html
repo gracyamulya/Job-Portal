@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Signup</h1>
+    <form action="/signup" method="post" th:object="${portalUser}">
+        Name:<input type="text" name="name" th:field="*{name}">
+        <span th:errors="*{name}"></span>
+        <br>
+        Email:<input type="email" name="email" th:field="*{email}">
+        <span th:errors="*{email}"></span>
+        <br>
+        Mobile:<input type="text" name="mobile" th:field="*{mobile}">
+        <span th:errors="*{mobile}"></span>
+        <br>
+        Data Of Birth:<input type="date"  required="required" name="name" th:field="*{dob}">
+        <span th:errors="*{dob}"></span>
+        <br>
+        Password:<input type="password" name="password" th:field="*{password}">
+        <span th:errors="*{password}"></span>
+        <br>
+        Confirm Password:<input type="password" name="password" th:field="*{password}">
+        <span th:errors="*{password}"></span>
+        <br>
+        Role:<input type="radio" name="role" th:field="*{role}" value="application">Application
+        <input type="radio" name="role" th:field="*{role}" value="recruiter">Recruiter
+        <span th:errors="*{name}"></span>
+        <br>
+        <button>Signup</button>
+    </form>
+</body>
+</html>
